@@ -8,11 +8,11 @@ $tempoFinal = readline();
 list($diaInicial) = sscanf($diaInicial, "%d");
 list($diaFinal)  = sscanf($diaFinal, "%d");
 
-list($horaInicial, $minutoInicial, $segundoInicial) = sscanf(str_replace(":", "", $tempoInicial), "%d %d %d");
-list($horaFinal, $minutoFinal, $segundoFinal) = sscanf(str_replace(":", "", $tempoFinal), "%d %d %d");
+//list($horaInicial, $minutoInicial, $segundoInicial) = sscanf(str_replace(":", "", $tempoInicial), "%s %s %s");
+//list($horaFinal, $minutoFinal, $segundoFinal) = sscanf(str_replace(":", "", $tempoFinal), "%d %d %d");
 
-$dataInicial = date_create("04/".$diaInicial."/2021 ".$horaInicial.":".$minutoInicial.":".$segundoInicial."\n");
-$dataFinal = date_create("04/".$diaFinal."/2021 ".$horaFinal.":".$minutoFinal.":".$segundoFinal."\n");
+$dataInicial = date_create("04/".$diaInicial." ".(str_replace(" ", "", $tempoInicial))."\n");
+$dataFinal = date_create("04/".$diaFinal." ".(str_replace(" ", "", $tempoFinal))."\n");
 
 $periodoDoEvento = date_diff($dataInicial, $dataFinal);
 
