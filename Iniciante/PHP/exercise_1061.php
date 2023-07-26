@@ -1,8 +1,8 @@
 <?php
 
-$diaInicial = readline("Dia ");
+$diaInicial = trim(str_replace("Dia",'', readline()));
 $tempoInicial = readline();
-$diaFinal  = readline("Dia ");
+$diaFinal  = trim(str_replace("Dia",'', readline()));
 $tempoFinal = readline();
 
 list($diaInicial) = sscanf($diaInicial, "%d");
@@ -16,4 +16,4 @@ $dataFinal = date_create("04/".$diaFinal." ".(str_replace(" ", "", $tempoFinal))
 
 $periodoDoEvento = date_diff($dataInicial, $dataFinal);
 
-print_r($periodoDoEvento->format("%d dia(s)\n%H hora(s)\n%i minuto(s)\n%s segundo(s)\n"));
+print_r($periodoDoEvento->format("%d dia(s)\n%h hora(s)\n%i minuto(s)\n%s segundo(s)\n"));
