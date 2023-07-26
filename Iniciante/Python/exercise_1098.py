@@ -10,8 +10,6 @@ valorJ1 = 1
 valorJ2 = 2
 valorJ3 = 3
 
-# "{:.1f}".format
-
 while valorI <= 2:
     print(''.join(['I=', str(int(valorI)) if is_integer_num(valorI) else "{:.1f}".format(valorI), ' J=', str(int(valorJ1)) if is_integer_num(valorJ1) else "{:.1f}".format(valorJ1)]))
     print(''.join(['I=', str(int(valorI)) if is_integer_num(valorI) else "{:.1f}".format(valorI), ' J=', str(int(valorJ2)) if is_integer_num(valorJ2) else "{:.1f}".format(valorJ2)]))
