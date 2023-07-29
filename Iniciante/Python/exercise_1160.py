@@ -1,16 +1,15 @@
-def calculateProgressaoAritmetica(valorBase, progressao, anos):
-    return valorBase + (anos -1)*(valorBase*(progressao/100))
-
 def whenCityAWillBeBiggerThanCityB(
         populacaoA, porcentagemA, populacaoB, porcentagemB
 ):
-    anos = 1
-    while True:
-        if calculateProgressaoAritmetica(populacaoA, porcentagemA, anos) < calculateProgressaoAritmetica(populacaoB,
-                                                                                                         porcentagemB,
-                                                                                                         anos):
-            anos += 1
-        else:
+    PA = populacaoA
+    PB = populacaoB
+    anos = 0
+    while PB >= PA:
+        PA += int((PA*porcentagemA)/100)
+        PB += int((PB*porcentagemB)/100)
+        anos += 1
+
+        if anos > 100:
             break
     return anos
 
@@ -18,7 +17,6 @@ countLoop = int(input())
 valores = []
 
 for x in range(countLoop):
-    print('cheguei aqui de novo gente')
     result = input().split()
     populacaoA = int(result[0])
     populacaoB = int(result[1])
