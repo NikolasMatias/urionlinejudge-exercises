@@ -9,15 +9,15 @@ def calculateResult(valor_a, valor_b, valor_c):
             'answer': ':('
         },
         {
-            'result': lambda: valor_a < valor_b and valor_b < valor_c,
+            'result': lambda: valor_a < valor_b and valor_b < valor_c and (valor_c-valor_b < valor_b-valor_a),
             'answer': ':('
         },
         {
-            'result': lambda: valor_a > valor_b and valor_b < valor_c,
+            'result': lambda: valor_a < valor_b and valor_b < valor_c and (valor_c-valor_b >= valor_b-valor_a),
             'answer': ':)'
         },
         {
-            'result': lambda: valor_a > valor_b and valor_b < valor_c,
+            'result': lambda: valor_a > valor_b and valor_b > valor_c and (valor_b-valor_c < valor_a-valor_b),
             'answer': ':)'
         },
         {
