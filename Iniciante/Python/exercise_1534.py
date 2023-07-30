@@ -1,17 +1,18 @@
 while True:
     try:
-        valorN = int(input())
+        valor_n = int(input())
+        valor_base_2 = valor_n -1
 
+        for x in range(valor_n):
+            for y in range(valor_n):
+                if y == valor_base_2:
+                    print(str(2), end='')
+                    valor_base_2 -= 1
+                elif x == y:
+                    print(str(1), end='')
+                else:
+                    print(str(3), end='')
+                if (y + 1) >= valor_n:
+                    print('')
     except EOFError:
         break
-
-# x == y then 1
-
-# x: 0 y: 1 then 3
-# x: 0 y: 2 then 3
-# x: 0 y: 3 then 2
-
-# x: 2 y: 1 then 2
-
-# x: 6 y: 3 then 3
-# x: 5 y: 1 then 2
