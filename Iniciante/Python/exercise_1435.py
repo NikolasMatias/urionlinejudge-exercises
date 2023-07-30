@@ -18,8 +18,9 @@ while True:
             if (countLoop - baseY + 1) < baseValue:
                 baseValue = countLoop - baseY + 1
 
-            print(str(baseValue), end='')
+            print('{:3d}'.format(baseValue), end='')
             if baseY < countLoop:
                 print(' ', end='')
             else:
                 print('')
+    print('')
