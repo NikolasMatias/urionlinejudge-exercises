@@ -9,6 +9,8 @@ while 0 <= i < n:
         x[i] -= 1
         atacadas[i] = 1
         total -= 1
+    else:
+        break
     if lado:
         i += 1
     else:
